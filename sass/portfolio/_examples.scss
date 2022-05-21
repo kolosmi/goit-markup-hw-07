@@ -17,8 +17,13 @@
 }
 
 
-.portfolio__item:hover .portfolio__thumb::before {
+.portfolio__link:hover .portfolio__thumb::before {
     transform: translateY(0);
+}
+
+.portfolio__link:focus .portfolio__thumb::before {
+    transform: translateY(0);
+    
 }
 
 .portfolio__text {
@@ -41,7 +46,11 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__item:hover .portfolio__text {
+.portfolio__link:hover .portfolio__text {
+    transform: translate(0);
+}
+
+.portfolio__link:focus .portfolio__text {
     transform: translate(0);
 }
 
@@ -72,6 +81,13 @@
 
     &__link {
             display: block;
+
+            &:hover,
+                &:focus {
+                    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+                        1px 4px 6px rgba(0, 0, 0, 0.16);
+                       
+                }
         }
 
         &__item {
@@ -89,11 +105,7 @@
                 margin-bottom: 0;
             }
         
-            &:hover,
-            &:focus {
-                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-                    1px 4px 6px rgba(0, 0, 0, 0.16);
-            }
+            
         }
 }
 
@@ -103,6 +115,15 @@
     width: 370px;
     border-top: none;
 }
+
+// .portfolio__focus :hover .portfolio__thumb::before {
+//     transform: translateY(0);
+// }
+
+// .portfolio__focus :hover .portfolio__text {
+//     transform: translate(0);
+// }
+
 
 /*.portfolio__example {
     margin-bottom: 4px;
